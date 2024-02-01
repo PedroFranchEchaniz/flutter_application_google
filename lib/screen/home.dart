@@ -9,7 +9,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  final _initialCameraPostion = CameraPosition(target: LatLng(0, 0), zoom: 15);
+  final _initialCameraPostion = const CameraPosition(
+      target: LatLng(37.38049329951381, -6.007534638184238), zoom: 15);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class _HomeState extends State<Home> {
           initialCameraPosition: _initialCameraPostion,
           myLocationButtonEnabled: false,
           markers: {
-            Marker(
+            const Marker(
                 markerId: MarkerId('Salesianos de Triana'),
                 position: LatLng(37.38049329951381, -6.007534638184238))
           }),
